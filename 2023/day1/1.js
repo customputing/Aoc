@@ -9,8 +9,7 @@ require('fs').readFile('day1\\values.txt', (err, data) => {
     var values = data.toString().split('\n');
     for(var i = 0; i < values.length - 1; i++){
         var matched = values[i].match(/\d+/g)
-        d = matched.at(0).at(0).toString()
-        d += matched.at(-1).at(-1).toString()
+        d = matched.at(0).at(0).toString() + matched.at(-1).at(-1).toString()
         sum += parseInt(d);
     }
     console.log(sum);
