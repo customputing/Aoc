@@ -12,24 +12,21 @@ require('fs').readFile('day2\\values1.txt', (err, data) => {
 
             case 'blue':
                 
-                if (highestNumber > highestBlue){
+                if (highestNumber > highestBlue)
                     highestBlue = highestNumber
-                }
                 break;
 
             case 'green':
 
-                if (highestNumber > highestGreen){
+                if (highestNumber > highestGreen)
                     highestGreen = highestNumber
-                }
                 break;
             
 
             case 'red':
 
-                if (highestNumber > highestRed){
+                if (highestNumber > highestRed)
                     highestRed = highestNumber
-                }
                 break;
         }
     }
