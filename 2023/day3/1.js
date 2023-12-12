@@ -2,17 +2,17 @@ var thisLine = 0;
 var symbols = /[-!@#$%^&*()_+\\|~=`{}\[\]:";'<>?,\/]/g
 var allTheParts = 0
 
-require('fs').readFile('day3\\values.txt', (err, data) => {
+require('fs').readFile('day3\\values1.txt', (err, data) => {
     if(err) throw err;
 
     values = data.toString().split('\r\n')
     console.log("going to evaluate " + values.length + "lines")
-    values.map(CheckForSymbol)
+    values.map(CheckNumbers)
 
         //get numbers in each line, check their index against same line -1/+1 and previous/next line for each index and +1/-1
-    function CheckForSymbol(value){
+    function CheckNumbers(value){
         var thisLinesNumbers = value.match(/\d+/g)
-        console.log('this line is '+(thisLine +1))
+        console.log('this line is '+(thisLine + 1))
         if(thisLinesNumbers){
             thisLinesNumbers.map(CheckIndex)
         }
