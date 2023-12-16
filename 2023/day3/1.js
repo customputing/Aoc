@@ -2,7 +2,7 @@ var thisLine = 0;
 var symbols = /[-!@#$%^&*()_+\\|~=`{}\[\]:";'<>?,\/]/g
 var allTheParts = 0
 
-require('fs').readFile('day3\\values1.txt', (err, data) => {
+require('fs').readFile('day3\\values.txt', (err, data) => {
     if(err) throw err;
 
     values = data.toString().split('\r\n')
@@ -65,7 +65,7 @@ require('fs').readFile('day3\\values1.txt', (err, data) => {
         }
 
         //check line after for each index value can hold
-        if(thisLine < values.length  && valueCounted){
+        if(thisLine < (values.length - 1)  && valueCounted){
             for(j=0; j<valueLength + 2; j++){
                 if(values[thisLine + 1][currentStartingIndex - 1 + j]){
                     //console.log('checking index' + (currentStartingIndex - 1 + j) + 'found ' + values[thisLine + 1][currentStartingIndex - 1 + j])
